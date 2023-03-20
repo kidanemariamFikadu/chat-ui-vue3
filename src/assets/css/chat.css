@@ -1,0 +1,241 @@
+.chat-view {
+  position: fixed;
+  bottom: 4.3em;
+  right: 2em;
+  background-color: white;
+  box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  padding: 2em;
+  width: 40vh;
+  min-height: 60vh;
+  max-height: 60vh;
+}
+
+.chat-gradient-div {
+  background: linear-gradient(to bottom, green 0%, #ffffff 18%);
+}
+
+.chat-view .chat-close-button {
+  position: absolute;
+  top: -0.7em;
+  right: -0.7em;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  background-color: green;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.chat-tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.1em solid #ddd;
+  margin-bottom: 1em;
+}
+
+.chat-tab {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.chat-tab.active {
+  border-bottom: 0.1em solid green;
+}
+
+/* user list */
+.chat-user-list {
+  list-style-type: none;
+  border: 0.1em solid #ccc;
+  border-radius: 0.5em;
+  padding: 0;
+  margin: 0;
+  min-height: 53vh; /* Set a maximum height for the list */
+  max-height: 53vh; /* Set a maximum height for the list */
+  overflow-y: scroll; /* Add a vertical scrollbar */
+  border: 0.1em solid #ccc;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+.chat-user-list :hover {
+  background-color: #eee;
+}
+
+/* Change the scrollbar style */
+.chat-list::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #ccc;
+}
+
+.chat-list::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 0.5em;
+}
+.chat-user-list li {
+  white-space: nowrap;
+  display: flex;
+  margin-bottom: 0.1em;
+}
+
+.chat-user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2em;
+  cursor: pointer;
+}
+
+.chat-avatar {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+}
+
+.chat-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.chat-user-name {
+  font-weight: bold;
+}
+
+.chat-user-status {
+  padding: 0.3em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.chat-user-status.active {
+  background-color: green;
+}
+
+.chat-user-status.inactive {
+  background-color: red;
+}
+
+.chat-user-status.busy {
+  background-color: orange;
+}
+
+/* user list */
+
+/* chat list */
+.chat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border: 0.1em solid #ccc;
+  border-radius: 0.5em;
+}
+
+.chat-item.inbound {
+  width: 80%;
+  justify-content: right;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.message {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.time {
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+}
+
+/* chat list */
+
+/* chat display */
+/* .chat-wrapper {
+  position: relative;
+} */
+.chat-container {
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+  padding-bottom: 60px;
+  min-height: 53vh; /* Set a maximum height for the list */
+  max-height: 53vh; /* Set a maximum height for the list */
+}
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.chat-message p {
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+.chat-message.inbound p {
+  background-color: #1abc9c;
+  align-self: flex-start;
+}
+.chat-message.outbound p {
+  background-color: #3498db;
+  align-self: flex-end;
+}
+.chat-message .timestamp {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+.compose-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+.compose-form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.compose-form input[type="file"] {
+  display: none;
+}
+.compose-form button {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.compose-form button:hover {
+  background-color: #2980b9;
+}
+.chat-display-back-btn{
+  cursor: pointer;
+}
+/* chat display */
